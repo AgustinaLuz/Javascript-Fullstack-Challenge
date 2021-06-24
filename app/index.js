@@ -5,7 +5,7 @@ const app = express();
 
 const db = mongoose.connect('mongodb://localhost/fullstack-challenge', { useNewUrlParser: true });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 const Operation = require('./models/operationModel');
 const operationRouter = require('./routes/operationRouter')(Operation);
 
