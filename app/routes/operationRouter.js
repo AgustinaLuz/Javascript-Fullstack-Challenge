@@ -21,11 +21,11 @@ function routes(Operation) {
     });
     operationRouter.route('/operations/:operationId')
         .get((req, res) => {
-            const returnBook = req.operation.toJSON();
-            returnBook.links = {};
-            const type = req.book.type.replace(' ', '%20');
-            returnBook.links.FilterByThisType = `http://${req.headers.host}/api/operations/?type=${type}`;
-            res.json(returnBook)
+            const returnOperation = req.operation.toJSON();
+            returnOperation.links = {};
+            const type = req.operation.type;
+            returnOperation.links.FilterByThisType = `http://${req.headers.host}/api/operations/?type=${type}`;
+            res.json(returnOperation)
         })
         .put((req, res) => {
             const { operation } = req;
