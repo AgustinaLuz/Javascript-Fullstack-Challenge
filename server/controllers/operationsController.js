@@ -1,7 +1,9 @@
 function operationsController(Operation) {
+    const validTypes = ["ingreso", "egreso"];
     function post(req, res) {
         const operation = new Operation(req.body);
-        if (!req.body.type) {
+        operation.date = new Date();
+        if (!req.body.type || !validTypes.includes(req.body.type)) {
             res.status(400);
             return res.send('Type is required');
         }
