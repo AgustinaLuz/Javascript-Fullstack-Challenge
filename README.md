@@ -9,13 +9,13 @@
 
 
 ```
-cd client 
+cd server 
 npm i
 npm start
 ```
 
 ```
-cd server 
+cd app 
 npm i 
 npm start
 ```
