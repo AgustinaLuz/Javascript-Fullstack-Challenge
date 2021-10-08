@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap%27");
+
+* {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.product {
+  color: #d79491;
+}
+.amount {
+  color: green;
+}

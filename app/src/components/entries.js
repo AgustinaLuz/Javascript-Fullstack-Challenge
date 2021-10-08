@@ -12,6 +12,11 @@ function Entries() {
     console.log(products);
   };
 
+  const formatDate = (date) => {
+    let formattedDate = date.slice(0, 10);
+    return formattedDate;
+  };
+
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -19,10 +24,12 @@ function Entries() {
   return (
     <div>
       {products.map((product) => (
-        <p key={product._id}>
-          {product.concept} - {product.amount} - {product.date} -{" "}
+        <div key={product._id}>
+          <div className="product">{product.concept} </div>
+          <div className="amount">{product.amount} </div>
+          {formatDate(product.date)}
           {product.category} - {product.type}
-        </p>
+        </div>
       ))}
     </div>
   );
