@@ -62,7 +62,7 @@ function routes(Operation) {
             req.operation.remove((err) => {
                 return res.send(err);
             });
-            return res.sendStatus(204);
+            res.statusCode = 204;
         });
 
     return operationRouter;
